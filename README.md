@@ -1,1 +1,2 @@
-# movies-explorer-api
+# Movies Explorer API - бэкенд приложения 
+
