@@ -46,7 +46,6 @@ module.exports.login = (req, res, next) => {
     .catch(next);
 };
 
-
 module.exports.getCurrentUser = (req, res, next) => {
   User.findById(req.user._id)
     .orFail(new NotFound('Запрашиваемый пользователь не найден'))

@@ -1,11 +1,11 @@
 const movieRouter = require('express').Router();
-const { getMovies, createMovie, deleteMovie } = require('../controllers/movies');
 const { celebrate, Joi } = require('celebrate');
+const { getMovies, createMovie, deleteMovie } = require('../controllers/movies');
 const { regexp } = require('../constants/regexp');
 
 movieRouter.get('/', getMovies);
 
-movieRouter.post('/',celebrate({
+movieRouter.post('/', celebrate({
   body: Joi.object().keys({
     country: Joi.string().required(),
     director: Joi.string().required(),
